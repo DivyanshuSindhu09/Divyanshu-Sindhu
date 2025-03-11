@@ -304,6 +304,7 @@ nav li:hover{
     background-color: #151515;
     padding-top: 4vw;
     padding-left: 3vw;
+    position: relative;
 }
 
 
@@ -331,15 +332,29 @@ nav li:hover{
     font-weight: 100;
     font-size: 1.4vw;
     letter-spacing: 1px;
+    position: relative;
     margin-top: 3vw;
+    overflow: hidden;
 }
+
+/* .about-bottom .left::after{
+    content: "";
+    width: 90%;
+    height: 50%;
+    background-color: #119269;
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    border-radius: 50%;
+} */
 
 .about-bottom .left p{
     text-align: justify;
     text-justify: auto;
     font-family: "Absans";
     font-weight: 100;
-  
+    position: relative;
+    z-index: 99;
 }
 
 .about-bottom .right{
@@ -465,4 +480,41 @@ nav li:hover{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     letter-spacing: 1vw;
     font-weight: 900;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+}
+
+/* .page-2 .object{
+    width: 150vw;
+    height: 35vw;
+    background-color: #119269;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -25%;
+    filter: blur(15px);
+    left: -20%;
+    z-index: 1;
+} */
+
+
+.page-4{
+    height: 100vh;
+    background-color: #151515;
+    padding: 0 4vw;
+}
+
+.page-4 .project{
+    width: 100%;
+    height: 80vh;
+    background-color: #B4B5BE;
+    border-radius: 50px;
+    margin-top: 2vw;
+}
+
+.page-4 .project img{
+    width: 110%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 50px;
 }
