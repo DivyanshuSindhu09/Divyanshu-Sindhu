@@ -1,0 +1,457 @@
+@font-face {
+    font-family: "hell";
+    src: url(./Durer.otf);
+}
+
+@font-face {
+    font-family: "harmony";
+    src: url(./Gilroy-SemiBold.f3ed44cd.ttf);
+}
+
+@font-face {
+    font-family: "NeueD";
+    src: url(./NeueHaasDisplay-Mediu.ttf);
+}
+
+@font-face {
+    font-family: "Mic";
+    src: url(./Michroma-Regular.ttf);
+}
+
+@font-face {
+    font-family: "NeueR";
+    src: url(./NeueHaasDisplay-Roman.ttf);
+}
+
+@font-face {
+    font-family: "Italian";
+    src: url(./Italianno-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    /* overflow-x: unset; */
+    /* pointer-events: none; */
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.loader{
+    background-color: #1E1E1E;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transition: all ease-in 0.5s;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#landing-svg path{
+    fill: transparent;
+    stroke: white;
+    stroke-width: 0.7;
+    stroke-dasharray: 1500px;
+    stroke-dashoffset: 1500px; 
+    animation: tB 5s ease-in-out forwards 1s;
+    
+
+}
+
+@keyframes tB {
+50%{
+    fill: transparent;
+}
+  100% {
+        stroke-dashoffset: 0;
+        fill: white;
+        transition: all ease-in 0.5s;
+    }
+    
+}
+
+.loader p{
+    font-family: mic;
+    color: white;
+    font-size: 2.5vw;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2vw;
+}
+
+/* .para{
+    position: absolute;
+    width: 120vw;
+    height: 63vw;
+    background:linear-gradient(to right ,rgb(0, 0, 0), rgb(163, 161, 172)) ;
+    display: block;
+    border-radius: 50%;
+    top: -50%;
+} */
+
+
+.landing{
+    height: 100vh;
+    background-color: #151515;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.main{
+    /* background-color: black; */
+}
+
+.spline{
+    width: 100%;
+    height: 100%;
+    transform: translate(22%, -20%) scale(1.5);
+    position: absolute;
+}
+
+nav{
+    padding: 0 5vw;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #151515;
+}
+
+.nav-left p{
+    color: #B4B5BE;
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    z-index: 10;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.nav-left p:hover{
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    transition: all ease 0.7s;
+}
+
+nav ul{
+    min-width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    color: #B4B5BE;
+    gap: 8vw;
+    position: relative;
+    z-index: 10;
+}
+
+nav li:hover{
+    color: rgb(255, 255, 255);
+    transition: all ease 0.7s;
+    border-bottom: 1px solid white;
+}
+
+.hero{
+    width: 100%;
+    background: transparent;
+    height: 60vh;
+    position: absolute;
+    top: 21%;
+    padding-left: 4vw;
+}
+
+.reveal h1{
+    cursor: pointer;
+    font-size: 13vw;
+    position: relative;
+    z-index: 99;
+    font-family: Harmony;
+    font-weight: 700;
+    transform: translateY(110%);
+    color: transparent;
+    background: linear-gradient(to right,#fc72ff,#8f68ff, #487bff, #8f68ff, #fc72ff );
+    -webkit-background-clip: text;
+    animation: grad-anim 2.5s linear infinite;
+    background-size: 200%;
+}
+.reveal{
+    /* background-color: aqua; */
+    overflow: hidden;
+}
+@keyframes grad-anim {
+    to{
+       background-position: 200%;
+    }    
+   }
+
+.hero #svtext{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    position: absolute;
+    top: 35%;
+    left: 17%;
+   
+}
+
+.hero #svtext h1{
+  
+    transform: translateY(110%);
+
+}
+
+#page-1-svg path{
+    fill: transparent;
+    stroke: white;
+    stroke-width: 0.7;
+    stroke-dasharray: 1500px;
+    stroke-dashoffset: 1500px; 
+    animation: tA 5s ease-in-out forwards 7s;
+    
+
+}
+
+@keyframes tA {
+50%{
+    fill: transparent;
+}
+  100% {
+        stroke-dashoffset: 0;
+        fill: white;
+        transition: all ease-in 0.5s;
+    }
+    
+}
+
+#arr1{
+    color: black;
+    padding: .5vw;
+    font-size: 1.5vw;
+    font-weight: 100;
+    position: absolute;
+    background-color: #D5D5DA;
+    border-radius: 50%;
+    bottom: 2%;
+    left: 1%;
+}
+
+#arr2{
+    color: black;
+    padding: .5vw;
+    font-size: 1.5vw;
+    font-weight: 100;
+    position: absolute;
+    background-color: #D5D5DA;
+    border-radius: 50%;
+    bottom: 2%;
+    right:  1%;
+}
+
+.based p{
+    position: absolute;
+    color: white;
+    font-family: NeueD;
+    text-transform: uppercase;
+    top: 75%;
+    left: 85.8%;
+}
+
+.cursor{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #D5D5DA;
+    position: fixed;
+    z-index: 99;
+    /* mix-blend-mode: multiply    ; */
+}
+
+.page-2{
+    min-height: 100vh;
+    background-color: #151515;
+    padding-top: 4vw;
+    padding-left: 3vw;
+}
+
+
+/* .about-heading h2{
+    color: white;
+    font-family: Mic;
+    font-size: 6vw;
+    text-transform: uppercase;
+} */
+
+.about-bottom {
+    margin-top: 5vw;
+    height: 60vh;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+}
+
+.about-bottom .left{
+    width: 45%;
+    /* background-color: #fc72ff; */
+    color: #D5D5DA;
+    padding: 4vw;
+    font-family: neuer;
+    font-weight: 100;
+    font-size: 1.4vw;
+    letter-spacing: 1px;
+    
+}
+
+.about-bottom .left p{
+    text-align: justify;
+    text-justify: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+  
+}
+
+.about-bottom .right{
+    width: 50%;
+    background-color: #151515;
+    height: 60vh;
+}
+
+.about-bottom .left span{
+    /* background-color: black; */
+    color: #D5D5DA;
+    font-family: italian;
+    font-size: 3vw;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 4vw;
+}
+
+.about-bottom .left #devansh{
+    font-size: 3.8vw;
+    font-weight: 700;
+    color: transparent;
+    background: linear-gradient(to right,#14CF93,#119269);
+    -webkit-background-clip: text;
+}
+
+
+.about-bottom .left #first-line{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.about-bottom .left #comma{
+    font-size: 2.5vw;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.about-bottom .right{
+    /* position: relative; */
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .about-bottom .right #devansh{
+   position: absolute; 
+   top: 15%
+} */
+
+#pg-2-svg path{
+    fill: transparent;
+    stroke: white;
+    stroke-width: 0.7;
+    stroke-dasharray: 1500px;
+    stroke-dashoffset: 1500px; 
+    
+    
+
+}
+
+.about-bottom .right .img{
+    /* display: none; */
+    width: 40vh;
+    height: 45vh;
+    filter: grayscale();
+    position: relative;
+    z-index: 999;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    border-radius: 50%;
+    background: url(https://media.licdn.com/dms/image/v2/D5603AQH81DD9ybhbLQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727622090031?e=1747267200&v=beta&t=1E57Hd6OMh8J2_nqwDfLd61gajPgAEu-mYG7S3e9anc);
+    background-size: cover;
+    background-position: top;
+    
+}
+
+
+
+.about-bottom .right .img:hover{
+    filter: grayscale(0);
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.about-bottom .right .second{
+    width: 42vh;
+    height: 47vh;
+    background-image: conic-gradient(from  var(--angle) ,transparent 70%, white);
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(5px);
+    opacity: 0.75;
+    animation: border 3s linear  infinite  ;
+    overflow: hidden; 
+}
+
+@keyframes border{
+    from{
+        --angle : 0deg
+    }
+    to{
+        --angle : 360deg;
+    }
+}
+
+.page-3{
+    height: 100vh;
+    background-color: #151515;
+}
+
+.page-2 h2{
+    color: white;
+    font-size: 40vw;
+    /* display: inline-block; */
+    /* white-space: nowrap; */
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
