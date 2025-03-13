@@ -166,12 +166,59 @@ gsap.from(".cursor",{
 })
 
 let main = document.querySelector(".main")
-let cursor = document.querySelector(".cursor")
+const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
+
+main.addEventListener('mousemove', function(e){
+  if(e.clientX === 0){
+    circles.style.display = "none"
+  }
+})
+
+circles.forEach(function (circle, index) {
+  circle.x = 0;
+  circle.y = 0;
+ 
+});
+
+window.addEventListener("mousemove", function(e){
+  coords.x = e.clientX;
+  coords.y = e.clientY;
+  
+});
+
+function animateCircles() {
+  
+  let x = coords.x;
+  let y = coords.y;
+  
+  circles.forEach(function (circle, index) {
+    circle.style.left = x - 12 + "px";
+    circle.style.top = y - 12 + "px";
+    
+    circle.style.scale = (circles.length - index) / circles.length;
+    
+    circle.x = x;
+    circle.y = y;
+
+    const nextCircle = circles[index + 1] || circles[0];
+    x += (nextCircle.x - x) * 0.3;
+    y += (nextCircle.y - y) * 0.3;
+  });
+ 
+  requestAnimationFrame(animateCircles);
+}
+
+animateCircles();
+
+
+
+
 
 main.addEventListener("mousemove", function(e){
     gsap.to(cursor,{
-        x:e.clientX,
-        y:e.clientY,
+        x:`${e.clientX} - 12 px`,
+        y:`${e.clientY} - 12 px`,
         duration :1,
         ease:"back.out"
     })
@@ -198,7 +245,7 @@ document.addEventListener("keydown", function(e){
 })
 
 gsap.to("#pg-2-svg path",{
-    duration : 6,
+    duration : 4,
     delay:1,
     fill:"white",
     ease: "power2.inOut",
@@ -222,7 +269,7 @@ gsap.from(".about-bottom .left p",{
 
 gsap.from(".about-bottom .left #devansh",{
     opacity:0,
-    duration:3,
+    duration:2.5,
     y:"-100%",
     delay:2.5,
     scrollTrigger:{
@@ -232,7 +279,7 @@ gsap.from(".about-bottom .left #devansh",{
 })
 
 gsap.to(".page-3 h2",{
-  transform:"translateX(-88%)",
+  transform:"translateX(-78%)",
   scrollTrigger:{
     trigger : ".page-3",
     scroller : ".main",
@@ -246,18 +293,22 @@ gsap.to(".page-3 h2",{
 let noCursor = document.querySelectorAll(".page-4 .project")
 noCursor.forEach(function(e){
   e.addEventListener("mouseenter", function(){
-  cursor.style.display = "none"
+  circles.forEach(function(c){
+    c.style.display = "none"
+  })
 })
 })
 
 noCursor.forEach(function(e){
   e.addEventListener("mouseleave", function(){
-  cursor.style.display = "block"
+    circles.forEach(function(c){
+      c.style.display = "block"
+    })
 })
 })
 
 gsap.to("#pg-4-svg path",{
-  duration : 6,
+  duration : 4,
   delay:1,
   fill:"white",
   ease: "power2.inOut",
@@ -292,3 +343,37 @@ function cardHover (){
 }
 
 cardHover()
+
+let myText = new SplitType(".project-title")
+gsap.to(".container #f1 .char",{
+  y:0,
+  duration:.5,
+  delay:1,
+  stagger:0.05,
+  scrollTrigger:{
+    trigger : ".page-4",
+    scroller : ".main"
+}
+})
+
+gsap.to(".container #f2 .char",{
+  y:0,
+  duration:.5,
+  delay:1,
+  stagger:0.05,
+  scrollTrigger:{
+    trigger : ".page-4 #f2",
+    scroller : ".main"
+}
+})
+
+gsap.to(".container #f3 .char",{
+  y:0,
+  duration:.5,
+  delay:1,
+  stagger:0.05,
+  scrollTrigger:{
+    trigger : ".page-4 #f3",
+    scroller : ".main"
+}
+})
