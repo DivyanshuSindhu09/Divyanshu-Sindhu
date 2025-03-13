@@ -362,7 +362,7 @@ gsap.to(".container #f2 .char",{
   delay:1,
   stagger:0.05,
   scrollTrigger:{
-    trigger : ".page-4 #f2",
+    trigger : ".page-4 #second-project",
     scroller : ".main"
 }
 })
@@ -373,7 +373,7 @@ gsap.to(".container #f3 .char",{
   delay:1,
   stagger:0.05,
   scrollTrigger:{
-    trigger : ".page-4 #f3",
+    trigger : ".page-4 #third-project",
     scroller : ".main"
 }
 })

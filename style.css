@@ -182,7 +182,7 @@ nav li:hover{
 
 .reveal h1{
     cursor: pointer;
-    font-size: 13vw;
+    font-size: 11.5vw;
     position: relative;
     z-index: 99;
     font-family: Harmony;
@@ -197,6 +197,7 @@ nav li:hover{
 .reveal{
     /* background-color: aqua; */
     overflow: hidden;
+    position: relative;
 }
 @keyframes grad-anim {
     to{
@@ -267,13 +268,17 @@ nav li:hover{
     right:  1%;
 }
 
-.based p{
-    position: absolute;
+
+
+.reveal p{
     color: white;
-    font-family: NeueD;
     text-transform: uppercase;
-    top: 75%;
-    left: 85.8%;
+    font-family: neued;
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+    font-size: 1.5vw;
+    
 }
 
 .cursor{
@@ -377,8 +382,7 @@ nav li:hover{
 .about-bottom .left #devansh{
     font-size: 3.8vw;
     font-weight: 700;
-    color: transparent;
-    background: linear-gradient(to right,#14CF93,#119269);
+    color: #14CF93;
     -webkit-background-clip: text;
 }
 
