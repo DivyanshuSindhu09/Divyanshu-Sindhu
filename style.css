@@ -413,9 +413,6 @@ nav li:hover{
     stroke-width: 0.7;
     stroke-dasharray: 1500px;
     stroke-dashoffset: 1500px; 
-    
-    
-
 }
 
 .about-bottom .right .img{
@@ -499,22 +496,154 @@ nav li:hover{
 
 
 .page-4{
-    height: 100vh;
+    min-height: 100vh;
     background-color: #151515;
-    padding: 0 4vw;
+    padding: 0 5vw;
+    transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
 }
 
 .page-4 .project{
-    width: 100%;
+    width: 90%;
     height: 80vh;
     background-color: #B4B5BE;
     border-radius: 50px;
-    margin-top: 2vw;
+    margin-top: 1vw;
+    overflow: hidden;
+    
 }
 
 .page-4 .project img{
-    width: 110%;
+    width: 100%;
     object-fit: contain;
-    object-position: center;
+    object-position: left;
     border-radius: 50px;
+    transition: filter cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    /* scale: 0.8; */
 }
+
+.page-4 .project-title h2{
+    color: #14CF93;
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-family: absans;
+    text-align: left;
+    /* letter-spacing: .15vw; */
+    margin-top: 6vw;
+    display: list-item;
+    margin-left: 4vw;
+}
+
+
+
+ #ss{
+    background-color: #EFEAE3;
+}
+
+ #mlp{
+    background-color: #151515;
+}
+
+#cu{
+    background-color: black;
+}
+
+.page-4 .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pg-4-svg path{
+    fill: transparent;
+    stroke: white;
+    stroke-width: 0.7;
+    stroke-dasharray: 1500px;
+    stroke-dashoffset: 1500px; 
+}
+
+.prosur{
+    position: fixed;
+    width: 17vw;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+}
+
+.prosur>div{
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+}
+
+.prosur .prow{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: .7vw;
+}
+
+.prow .pcr{
+    width: 2vw;
+    height: 2vw;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.prow .pcap{
+    text-transform: uppercase;
+    font-family: neued;
+    letter-spacing: 1px;
+    padding: .7vw 3vw;
+    border-radius: 100px;
+    background-color: #fff;
+}
+
+.elem{
+    width: 100%;
+    position: relative;
+}
+
+.elem img{
+    width: 100%;
+    opacity: 0;
+    animation: the 4s linear infinite;
+    position: absolute;
+    border-radius: 15px;
+}
+
+.elem img:nth-child(2){
+    animation-delay: 1s;
+}
+
+.elem img:nth-child(3){
+    animation-delay: 2s;
+}
+
+.elem img:nth-child(4){
+    animation-delay: 3s;
+}
+
+
+@keyframes the {
+    0% {
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+    }
+    26%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+
+} 
