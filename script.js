@@ -152,7 +152,7 @@ gsap.from(".ri-arrow-down-fill",{
     delay:5.5
 })
 
-gsap.from(".based p",{
+gsap.from(".based",{
     opacity:0,
     duration:1.5,
     // y:"-50%",
@@ -377,3 +377,38 @@ gsap.to(".container #f3 .char",{
     scroller : ".main"
 }
 })
+
+gsap.to("#pg-6-svg path",{
+  duration : 4,
+  delay:1,
+  fill:"white",
+  ease: "power2.inOut",
+  strokeDashoffset: 0,
+  scrollTrigger:{
+      trigger : ".page-6",
+      scroller : ".main"
+  }
+})
+
+gsap.from(".contlef .socials", {
+  opacity:0,
+  x:"-10%",
+  duration:2,
+  delay:1,
+  scrollTrigger:{
+    trigger : ".page-6",
+    scroller : ".main"
+  }
+})
+
+gsap.from(form, {
+  opacity:0,
+  x:"-10%",
+  duration:2,
+  delay:1,
+  scrollTrigger:{
+    trigger : ".page-6",
+    scroller : ".main"
+  }
+})
+
