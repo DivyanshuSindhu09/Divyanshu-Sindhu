@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Spicy+Rice&display=swap');
+
+
 @font-face {
     font-family: "hell";
     src: url(./Durer.otf);
@@ -104,6 +107,7 @@ body{
 .landing{
     height: 100vh;
     background-color: #151515;
+    
     overflow: hidden;
     position: relative;
 }
@@ -164,6 +168,12 @@ nav ul{
     position: relative;
     z-index: 10;
 }
+
+nav ul a{
+    text-decoration: none;
+    color: #D5D5DA;
+}
+
 
 nav li:hover{
     color: rgb(255, 255, 255);
@@ -244,16 +254,12 @@ nav li:hover{
     
 }
 
-#arr1{
-    color: black;
-    padding: .5vw;
-    font-size: 1.5vw;
-    font-weight: 100;
+#arr{
     position: absolute;
-    background-color: #D5D5DA;
-    border-radius: 50%;
+    color: white;
     bottom: 2%;
     left: 1%;
+    font-size: 30px;
 }
 
 #arr2{
@@ -277,7 +283,7 @@ nav li:hover{
     position: absolute;
     bottom: 20%;
     right: 0;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     
 }
 
@@ -308,6 +314,7 @@ nav li:hover{
 .page-2{
     min-height: 100vh;
     background-color: #151515;
+    
     padding-top: 4vw;
     padding-left: 3vw;
     position: relative;
@@ -330,10 +337,11 @@ nav li:hover{
 }
 
 .about-bottom .left{
-    width: 55%;
-    /* background-color: #fc72ff; */
+    width: 45%;
+    
+    margin-left: 4vw;
     color: #D5D5DA;
-    padding: 4vw;
+    
     font-family: neuer;
     font-weight: 100;
     font-size: 1.4vw;
@@ -343,16 +351,17 @@ nav li:hover{
     overflow: hidden;
 }
 
-/* .about-bottom .left::after{
+.about-bottom .left::after{
     content: "";
-    width: 90%;
+    width: 110%;
     height: 50%;
     background-color: #119269;
     position: absolute;
-    top: 40%;
-    left: 2%;
+    top: 65%;
+    left: -5%;
+    filter: blur(5px);
     border-radius: 50%;
-} */
+}
 
 .about-bottom .left p{
     text-align: justify;
@@ -405,6 +414,7 @@ nav li:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 /* .about-bottom .right #devansh{
@@ -533,14 +543,16 @@ nav li:hover{
     font-size: 4vw;
     text-transform: uppercase;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
     text-align: left;
     /* letter-spacing: .15vw; */
     margin-top: 6vw;
     display: list-item;
     margin-left: 4vw;
-    transform: translateX(-40%);
+    transform: translate(-40%, 115px);
     clip-path: polygon(0 0, 100% 2%, 100% 100%, 0% 100%);
-
 }
 
 #f1{
@@ -760,7 +772,7 @@ form .btn{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     cursor: pointer;
     border: 0;
-    transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    transition: translateY cubic-bezier(0.19, 1, 0.22, 1) 2s;
 }
 
 .contlef .socials:nth-child(1):hover{
@@ -823,11 +835,6 @@ form .btn:hover{
     background-color: #ff004f;
     color: white;
     transform: translateY(10px);
-}
-
-.page-5{
-    height: 100vh;
-    background-color: #151515;
 }
 
 #pg-6-svg path{

@@ -1,4 +1,5 @@
-gsap.registerPlugin(ScrollTrigger);
+function locoTrigger(){
+  gsap.registerPlugin(ScrollTrigger);
 
 const locoScroll = new LocomotiveScroll({
   el: document.querySelector(".main"),
@@ -86,13 +87,19 @@ tl.from(".purple p", { scale: 0.3, rotation: 45, autoAlpha: 0, ease: "power2" })
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
 ScrollTrigger.refresh();
+}
+locoTrigger()
 
 
-let bg = document.querySelector(".loader")
+// function loader() {
+//   let bg = document.querySelector(".loader")
 
-setTimeout(function(){
-    bg.style.top = "-100%"
-},5200)
+// setTimeout(function(){
+//     bg.style.top = "-100%"
+// },5200)
+// }
+// loader()
+
 
 gsap.from(".loader h1",{
     opacity : 0,
@@ -215,14 +222,7 @@ animateCircles();
 
 
 
-main.addEventListener("mousemove", function(e){
-    gsap.to(cursor,{
-        x:`${e.clientX} - 12 px`,
-        y:`${e.clientY} - 12 px`,
-        duration :1,
-        ease:"back.out"
-    })
-})
+
 
 gsap.from(".loader p",{
     opacity:0,
@@ -319,6 +319,63 @@ gsap.to("#pg-4-svg path",{
   }
 })
 
+gsap.to("#pg-6-svg path",{
+  duration : 4,
+  delay:1,
+  fill:"white",
+  ease: "power2.inOut",
+  strokeDashoffset: 0,
+  scrollTrigger : {
+    trigger:".page-6",
+    scroller:".main"
+  }
+
+})
+
+gsap.from(".contlef .socials",{
+  opacity:0,
+  delay:.5,
+  duration:2,
+  scrollTrigger:{
+    trigger:".page-6",
+    scroller : ".main"
+  }
+})
+
+gsap.to(".container #f1 ",{
+  y:"-115px",
+  opacity:1,
+  duration:.5,
+  delay:1,
+  skewY:0,
+  scrollTrigger:{
+    trigger : ".page-4 #first-project",
+    scroller : ".main"
+}
+})
+
+gsap.to(".container #f2",{
+  y:"-115px",
+  duration:.5,
+  delay:1,
+  stagger:0.05,
+  scrollTrigger:{
+    trigger : ".page-4 #second-project",
+    scroller : ".main"
+}
+})
+
+gsap.to(".container #f3",{
+  y:"-115px",
+  duration:.5,
+  delay:1,
+  stagger:0.05,
+  scrollTrigger:{
+    trigger : ".page-4 #third-project",
+    scroller : ".main"
+}
+})
+
 let pros = document.querySelector(".prosur")
 function cardHover (){
     document.querySelectorAll(".project")
@@ -344,71 +401,12 @@ function cardHover (){
 
 cardHover()
 
-let myText = new SplitType(".project-title")
-gsap.to(".container #f1 .char",{
-  y:0,
-  duration:.5,
-  delay:1,
-  stagger:0.05,
-  scrollTrigger:{
-    trigger : ".page-4",
-    scroller : ".main"
-}
-})
+let myText = new SplitType("#f1")
 
-gsap.to(".container #f2 .char",{
-  y:0,
-  duration:.5,
-  delay:1,
-  stagger:0.05,
-  scrollTrigger:{
-    trigger : ".page-4 #second-project",
-    scroller : ".main"
-}
-})
 
-gsap.to(".container #f3 .char",{
-  y:0,
-  duration:.5,
-  delay:1,
-  stagger:0.05,
-  scrollTrigger:{
-    trigger : ".page-4 #third-project",
-    scroller : ".main"
-}
-})
 
-gsap.to("#pg-6-svg path",{
-  duration : 4,
-  delay:1,
-  fill:"white",
-  ease: "power2.inOut",
-  strokeDashoffset: 0,
-  scrollTrigger:{
-      trigger : ".page-6",
-      scroller : ".main"
-  }
-})
 
-gsap.from(".contlef .socials", {
-  opacity:0,
-  x:"-10%",
-  duration:2,
-  delay:1,
-  scrollTrigger:{
-    trigger : ".page-6",
-    scroller : ".main"
-  }
-})
 
-gsap.from(form, {
-  opacity:0,
-  x:"-10%",
-  duration:2,
-  delay:1,
-  scrollTrigger:{
-    trigger : ".page-6",
-    scroller : ".main"
-  }
-})
+
+
 
