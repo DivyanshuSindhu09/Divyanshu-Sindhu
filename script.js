@@ -91,14 +91,14 @@ ScrollTrigger.refresh();
 locoTrigger()
 
 
-// function loader() {
-//   let bg = document.querySelector(".loader")
+function loader() {
+  let bg = document.querySelector(".loader")
 
-// setTimeout(function(){
-//     bg.style.top = "-100%"
-// },5200)
-// }
-// loader()
+setTimeout(function(){
+    bg.style.top = "-100%"
+},5200)
+}
+loader()
 
 
 gsap.from(".loader h1",{
@@ -139,6 +139,14 @@ gsap.to(".hero #reveal h1", {
     delay : 5.8,
     stagger : 0.3})
 
+gsap.from(".port h3",{
+  opacity:0,
+    duration:1,
+    delay : 7,
+    ease: 'power2.inOut',
+    y : "-50%"
+})
+
 gsap.to(".hero #svtext h1", {
     transform: "translateY(-5%)",
     duration : 2.5,
@@ -152,11 +160,18 @@ gsap.from(".spline",{
     duration : 3
 })
 
-gsap.from(".ri-arrow-down-fill",{
+gsap.from("#arr",{
     opacity:0,
     duration:1.5,
     y:"-50%",
-    delay:5.5
+    delay:6.5
+})
+
+gsap.from("#arr2",{
+  opacity:0,
+  duration:1.5,
+  y:"-50%",
+  delay:6.5
 })
 
 gsap.from(".based",{
@@ -326,18 +341,45 @@ gsap.to("#pg-6-svg path",{
   ease: "power2.inOut",
   strokeDashoffset: 0,
   scrollTrigger : {
-    trigger:".page-6",
+    trigger:".page-6 .cont-head",
     scroller:".main"
   }
 
 })
 
+gsap.to("#pg-5-svg path",{
+  duration : 4,
+  delay:1,
+  fill:"white",
+  ease: "power2.inOut",
+  strokeDashoffset: 0,
+  scrollTrigger : {
+    trigger:".page-5",
+    scroller:".main"
+  }
+
+})
+
+gsap.from('.ski', {
+  duration: 1,
+  opacity: 0,
+  stagger: 0.3,
+  delay: 2,
+  ease: '"slow(0.7,0.7,false)"',
+  scrollTrigger : {
+    trigger:".page-5",
+    scroller:".main"
+  }
+});
+
 gsap.from(".contlef .socials",{
   opacity:0,
+
   delay:.5,
-  duration:2,
+  duration:3,
+  ease: '"slow(0.7,0.7,false)"',
   scrollTrigger:{
-    trigger:".page-6",
+    trigger:".page-6 .socials",
     scroller : ".main"
   }
 })
@@ -398,10 +440,7 @@ function cardHover (){
         })
     })
 }
-
 cardHover()
-
-let myText = new SplitType("#f1")
 
 
 

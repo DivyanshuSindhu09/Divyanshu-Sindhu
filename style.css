@@ -137,7 +137,7 @@ nav{
     color: #B4B5BE;
     font-size: 1vw;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 900;
     position: relative;
     z-index: 10;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
@@ -231,6 +231,20 @@ nav li:hover{
 
 }
 
+.landing .port{
+    position: absolute;
+    color: #D5D5DA;
+    font-weight: 900;
+    font-size: 1.5vw;
+    /* left: 50%; */
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    bottom: 2%;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 #page-1-svg path{
     fill: transparent;
     stroke: white;
@@ -263,15 +277,11 @@ nav li:hover{
 }
 
 #arr2{
-    color: black;
-    padding: .5vw;
-    font-size: 1.5vw;
-    font-weight: 100;
     position: absolute;
-    background-color: #D5D5DA;
-    border-radius: 50%;
+    color: white;
     bottom: 2%;
-    right:  1%;
+    right: 1%;
+    font-size: 30px;
 }
 
 
@@ -279,12 +289,12 @@ nav li:hover{
 .reveal p{
     color: white;
     text-transform: uppercase;
-    font-family: neued;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     position: absolute;
     bottom: 20%;
     right: 0;
     font-size: 1.2vw;
-    
+    font-weight: 700;
 }
 
 .cursor{
@@ -308,6 +318,7 @@ nav li:hover{
     pointer-events: none;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
     z-index: 999;
+   
     filter: blur(5px);
 }
 
@@ -351,7 +362,7 @@ nav li:hover{
     overflow: hidden;
 }
 
-.about-bottom .left::after{
+/* .about-bottom .left::after{
     content: "";
     width: 110%;
     height: 50%;
@@ -361,7 +372,7 @@ nav li:hover{
     left: -5%;
     filter: blur(5px);
     border-radius: 50%;
-}
+} */
 
 .about-bottom .left p{
     text-align: justify;
@@ -838,6 +849,96 @@ form .btn:hover{
 }
 
 #pg-6-svg path{
+    fill: transparent;
+    stroke: white;
+    stroke-width: 0.7;
+    stroke-dasharray: 1500px;
+    stroke-dashoffset: 1500px; 
+}
+
+.page-5{
+    overflow-x: hidden;
+    height: 100vh;
+    background-color: #151515;
+    padding-top: 2vw;
+    background-image: radial-gradient(circle at bottom center, #14CF93 10%, #151515 30%);
+}
+
+#ski-hea{
+    margin-left: 3vw;
+}
+
+.skill-container{
+    height: 65vh;
+    width: 100%;
+    margin-top: 2.5vw;
+    /* background-color: aqua; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    transform: translateX(4%);
+    padding: 2vw 20vw;
+    cursor: pointer;
+}
+
+.ski{
+    height: 180px;
+    width: 160px;
+    /* border: 1px solid black; */
+    background-color: #2f3133;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: transform cubic-bezier(0.19, 1, 0.22, 1)2s, background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    
+}
+.ski:hover {
+    transform: translateY(-10%);
+    box-shadow: 0 6px 10px rgba(255, 253, 253, 0.404);
+    background-color: rgb(68, 233, 206);
+  }
+
+  .ski:hover h4{
+    color: black;
+  }
+
+.skill-icon img{
+    width: 100px;
+    height: 100px;
+}
+
+#css img{
+    height: 115px;
+}
+#c-h h4{
+    transform: translateY(-7px);
+    /* background-color: #151515; */
+}
+
+.ski h4{
+    text-transform: uppercase;
+    font-size: 24px;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #D5D5DA;
+}
+
+#j-i img{
+    height: 115px;
+}
+
+#js h4{
+    transform: translateY(-7px);
+    /* background-color: #151515; */
+}
+
+#gsap img{
+    transform: translateX(-15px);
+}
+
+#pg-5-svg path{
     fill: transparent;
     stroke: white;
     stroke-width: 0.7;
