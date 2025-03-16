@@ -57,7 +57,7 @@ body{
 }
 
 .loader{
-    background-color: #1E1E1E;
+    background-color: #000;
     position: fixed;
     z-index: 99999;
     width: 100%;
