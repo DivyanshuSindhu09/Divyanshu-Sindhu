@@ -137,6 +137,7 @@ gsap.to(".hero #reveal h1", {
     duration : 2.5,
     ease: "power2.inOut",
     delay : 5.8,
+    opacity:1,
     stagger : 0.3})
 
 gsap.from(".port h3",{
@@ -152,6 +153,7 @@ gsap.to(".hero #svtext h1", {
     duration : 2.5,
     ease: "power2.inOut",
     delay : 5.8,
+    opacity:1,
     stagger : 0.3})
 
 gsap.from(".spline",{
