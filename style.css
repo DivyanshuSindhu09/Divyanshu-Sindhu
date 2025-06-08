@@ -450,7 +450,7 @@ nav li:hover{
     z-index: 999;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
     border-radius: 50%;
-    background: url(./pfp.jpeg);
+    background: url(https://media.licdn.com/dms/image/v2/D5603AQH81DD9ybhbLQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727622090014?e=1755129600&v=beta&t=9xV3rnVlFNcAcFBAt6d4i9QvAmUGwGLkmcdy-SrPpmM);
     background-size: cover;
     background-position: top;
     
